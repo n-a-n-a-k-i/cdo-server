@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "started_at": {
+      "type": "date",
+      "required": true
+    },
+    "finished_at": {
+      "type": "date",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    },
+    "object": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::object.object",
+      "inversedBy": "orders"
+    },
+    "device": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::device.device",
+      "inversedBy": "orders"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

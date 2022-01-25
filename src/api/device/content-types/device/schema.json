@@ -35,6 +35,12 @@
       "type": "media",
       "multiple": false,
       "required": true
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "device"
     }
   }
 }

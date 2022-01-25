@@ -23,6 +23,12 @@
       "type": "media",
       "multiple": false,
       "required": true
+    },
+    "devices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::device.device",
+      "mappedBy": "vendor"
     }
   }
 }

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exposes",
+  "info": {
+    "singularName": "expose",
+    "pluralName": "exposes",
+    "displayName": "Expose"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
